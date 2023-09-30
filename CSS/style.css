@@ -1,0 +1,184 @@
+:root {
+   --primary: #b6895b;
+   --bg: #010101;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   background-color: var(--bg);
+   color: #fff;
+}
+
+/* Navbar */
+
+.navbar {
+   /* membuat posisinya sebelum nya vertical jadi horizontal (fleksibel) */
+   display: flex;
+
+   justify-content: space-between;
+   align-items: center;
+   padding: 1.4rem 7%;
+   /* 0.8 buat transparant */
+   background-color: rgba(1, 1, 1, 0.8);
+
+   border-bottom: 1px solid #513c28;
+   position: fixed;
+   /* supaya mentok ke atas */
+   top: 0;
+
+   /* supaya penuh 1 layar = tarik ke kiri dan ke kanan */
+   left: 0;
+   right: 0;
+
+   /* membuat navbar paling atas atau paling depan */
+   z-index: 9999;
+}
+
+.navbar .navbar-logo {
+   font-size: 2rem;
+   font-weight: 700;
+   font-style: italic;
+   color: #fff;
+}
+
+.navbar .navbar-logo span {
+   color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+   color: #fff;
+
+   /* membuat posisi ke bawah */
+   display: inline-block;
+
+   font-size: 1.2rem;
+   margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+   color: var(--primary);
+}
+
+/* membuat garis bawah pada menu navbar*/
+/* ::after memunculkan animasi nya sebelum di hover */
+.navbar .navbar-nav a::after {
+   /* conten di kosongkan supaya bisa mengatur dimensi */
+   content: '';
+
+   /* memunculkan border dibawah */
+   display: block;
+
+   /* mengatur jarak border pada teks navbar */
+   padding-bottom: 0.5rem;
+
+   /* membuat garis/border */
+   border-bottom: 0.1rem solid var(--primary);
+
+   /* mematikan animasi nya dulu dan muncul nya ketika di hover */
+   transform: scaleX(0);
+
+   /* mengatur muncul waktu nya hover supaya lebih smoot dan halus */
+   transition: 0.2s linear;
+}
+
+/* memunculkan ::after ketika di hover atau di cursor */
+.navbar .navbar-nav a:hover::after {
+   /* memunculkan kembali animasi ketika di hover (1 itu penuh dan 0.5 setengah */
+   transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+   color: #fff;
+
+   /* 0 itu atas bawah dan 0.5rem kiri kanan */
+   margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+   color: var(--primary);
+}
+
+#hamburger-menu {
+   /* menghilangkan humberger menu */
+   display: none;
+}
+
+/* End Navbar */
+
+/* mengatur responsive */
+/* Media Queriy */
+
+/* Laptop */
+@media (max-width: 1024px) {
+   html {
+      font-size: 75%;
+   }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+   html {
+      font-size: 60%;
+   }
+
+   #hamburger-menu {
+      display: inline-block;
+   }
+
+   .navbar .navbar-nav {
+      /* membuat posisi fleksibel tanpa menggangu elemnt yg lain */
+      position: absolute;
+
+      /* supaya keluar dari layar */
+      right: -100%;
+
+      /* supaya nempel ke atas */
+      top: 100%;
+
+      background-color: #fff;
+      width: 30rem;
+      height: 100vh;
+      transition: 0.4s;
+   }
+
+   .navbar .navbar-nav.active {
+      right: 0;
+   }
+
+   .navbar .navbar-nav a {
+      color: var(--bg);
+
+      /* membuat elemen turun ke bawah */
+      display: block;
+
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+   }
+
+   /* membuat garis bawah ke kiri yg sebelum nya di tengah */
+   .navbar .navbar-nav a::after {
+      /* sumbu X = 0 dan sumbu Y = 0. jadi ke tarik ke kiri */
+      transform-origin: 0 0;
+   }
+
+   .navbar .navbar-nav a:hover::after {
+      transform: scaleX(0.2);
+   }
+}
+
+/* Mobile Phone */
+@media (max-width: 576px) {
+   html {
+      font-size: 51%;
+   }
+}
