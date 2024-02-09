@@ -16,7 +16,6 @@ body {
    font-family: 'Poppins', sans-serif;
    background-color: var(--bg);
    color: #fff;
-   min-height: 3000px;
 }
 
 /* Navbar */
@@ -180,19 +179,22 @@ body {
 
 /* About */
 .about,
-.menu {
+.menu,
+.kontak {
    /* atas 8rem, kiri kanan 7%, bawah 1.4rem */
    padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
-.menu {
+.menu h2,
+.kontak h2 {
    text-align: center;
    margin-bottom: 3rem;
 }
 
 .about h2 span,
-.menu h2 span {
+.menu h2 span,
+.kontak h2 span {
    color: var(--primary);
 }
 
@@ -222,22 +224,24 @@ body {
 
 .about .content p {
    font-size: 1.2rem;
-   font-weight: 100;
+   font-weight: 300;
    margin-bottom: 0.8rem;
    line-height: 1.6;
 }
 /* About End */
 
 /* Menu Start */
-.menu h2 {
+.menu h2,
+.kontak h2 {
    margin-bottom: 1rem;
 }
-.menu p {
+.menu p,
+.kontak p {
    max-width: 30rem;
    margin: auto;
-   font-weight: 100;
    line-height: 1.6;
    text-align: center;
+   font-weight: 300;
 }
 
 .menu .row {
@@ -253,7 +257,7 @@ body {
    padding-bottom: 4rem;
 }
 
-.menu .row .menu-card .menu-card-img {
+.menu .row .menu-card img {
    border-radius: 50%;
    width: 80%;
 }
@@ -262,6 +266,86 @@ body {
    margin: 1rem auto 0.5rem;
 }
 /* Menu End */
+
+/* Kontak start */
+.kontak .row {
+   display: flex;
+   margin-top: 2rem;
+   background-color: #222;
+}
+
+.kontak .row .map {
+   flex: 1 1 45rem;
+   width: 100%;
+   object-fit: cover;
+}
+
+.kontak .row form {
+   flex: 1 1 45rem;
+   padding: 5rem 2rem;
+   text-align: center;
+}
+
+.kontak .row form .input-group {
+   display: flex;
+   align-items: center;
+   border: 1px solid #eee;
+   background-color: var(--bg);
+   padding-left: 2rem;
+   margin-top: 2rem;
+}
+
+.kontak .row form .input-group input {
+   width: 100%;
+   padding: 2rem;
+   font-size: 1.7rem;
+   background: none;
+   color: #fff;
+}
+
+.kontak .row form .btn {
+   display: inline-block;
+   margin-top: 2rem;
+   padding: 1rem 3rem;
+   background-color: var(--primary);
+   color: #fff;
+   font-size: 1.7rem;
+   cursor: pointer;
+}
+/* Kontak End */
+
+/* Footer Start */
+footer {
+   background-color: var(--primary);
+   text-align: center;
+   margin-top: 3rem;
+   padding: 1rem 0 3rem;
+}
+
+footer .socials a {
+   margin: 1rem;
+   color: #fff;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+   color: var(--bg);
+}
+
+footer .links {
+   margin: 1rem auto 0.5rem;
+}
+
+footer .links a {
+   margin: 1rem;
+   color: #fff;
+}
+
+footer p a {
+   font-weight: bold;
+   color: var(--bg);
+}
+/* Footer End */
 
 /* mengatur responsive */
 /* Media Queriy */
@@ -352,6 +436,18 @@ body {
 
    .menu p {
       font-size: 1.2rem;
+   }
+
+   .kontak .row {
+      flex-wrap: wrap;
+   }
+
+   .kontak .row .map {
+      height: 30rem;
+   }
+
+   .kontak .row form {
+      padding-top: 0;
    }
 }
 
