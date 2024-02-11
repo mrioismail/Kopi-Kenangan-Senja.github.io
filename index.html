@@ -15,6 +15,9 @@
 
       <!-- My Style -->
       <link rel="stylesheet" href="CSS/style.css" />
+
+      <!-- Animasi AOS -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    </head>
    <body>
       <!-- Navbar Start -->
@@ -91,16 +94,22 @@
 
       <!-- about -->
       <section id="about" class="about">
-         <h2><span>Tentang</span> Kami</h2>
+         <div data-aos="fade-up" data-aos-duration="1500">
+            <h2><span>Tentang</span> Kami</h2>
+         </div>
 
          <div class="row">
-            <div class="about-img">
-               <img src="img/tentang-kami.jpg" alt="Tentang Kami" />
+            <div data-aos="fade-right" data-aos-duration="2000">
+               <div class="about-img">
+                  <img src="img/tentang-kami.jpg" alt="Tentang Kami" />
+               </div>
             </div>
             <div class="content">
-               <h3>Kenapa memilih kopi ini?</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis alias odit esse aspernatur reprehenderit ab.</p>
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo in earum dolores quod, iusto placeat cum hic necessitatibus consequuntur porro.</p>
+               <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="600">
+                  <h3>Kenapa memilih kopi ini?</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis alias odit esse aspernatur reprehenderit ab.</p>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo in earum dolores quod, iusto placeat cum hic necessitatibus consequuntur porro.</p>
+               </div>
             </div>
          </div>
       </section>
@@ -108,41 +117,42 @@
 
       <!-- Menu section start -->
       <section id="menu" class="menu">
-         <h2><span>Menu</span> Kami</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquam sit facilis rem cupiditate officia.</p>
-
+         <div data-aos="fade-up" data-aos-duration="1500">
+            <h2><span>Menu</span> Kami</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquam sit facilis rem cupiditate officia.</p>
+         </div>
          <div class="row">
-            <div class="menu-card">
+            <div class="menu-card" data-aos="flip-left" data-aos-duration="500">
                <img src="img/menu/1.jpg" alt="espresso" class="menu-card-img" />
                <h3 class="menu-card-title">- Espresso -</h3>
                <p class="menu-card-price">IDR 20K</p>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
                <img src="img/menu/1.jpg" alt="espresso" class="menu-card-img" />
                <h3 class="menu-card-title">- Espresso -</h3>
                <p class="menu-card-price">IDR 20K</p>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
                <img src="img/menu/1.jpg" alt="espresso" class="menu-card-img" />
                <h3 class="menu-card-title">- Espresso -</h3>
                <p class="menu-card-price">IDR 20K</p>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
                <img src="img/menu/1.jpg" alt="espresso" class="menu-card-img" />
                <h3 class="menu-card-title">- Espresso -</h3>
                <p class="menu-card-price">IDR 20K</p>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
                <img src="img/menu/1.jpg" alt="espresso" class="menu-card-img" />
                <h3 class="menu-card-title">- Espresso -</h3>
                <p class="menu-card-price">IDR 20K</p>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="500">
                <img src="img/menu/1.jpg" alt="espresso" class="menu-card-img" />
                <h3 class="menu-card-title">- Espresso -</h3>
                <p class="menu-card-price">IDR 20K</p>
@@ -153,11 +163,13 @@
 
       <!-- produk start-->
       <section class="produk" id="produk">
-         <h2><span>Produk</span> Unggulan</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis earum labore quibusdam enim! Adipisci, ducimus?</p>
+         <div data-aos="fade-up" data-aos-duration="1500">
+            <h2><span>Produk</span> Unggulan</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis earum labore quibusdam enim! Adipisci, ducimus?</p>
+         </div>
 
          <div class="row">
-            <div class="produk-card">
+            <div class="produk-card" data-aos="zoom-in-right" data-aos-duration="500">
                <div class="produk-icon">
                   <a href="#"><i data-feather="shopping-cart"></i></a>
                   <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
@@ -178,7 +190,7 @@
                </div>
             </div>
 
-            <div class="produk-card">
+            <div class="produk-card" data-aos="zoom-in-left" data-aos-duration="500" data-aos-delay="500">
                <div class="produk-icon">
                   <a href="#"><i data-feather="shopping-cart"></i></a>
                   <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
@@ -199,7 +211,7 @@
                </div>
             </div>
 
-            <div class="produk-card">
+            <div class="produk-card" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="1000">
                <div class="produk-icon">
                   <a href="#"><i data-feather="shopping-cart"></i></a>
                   <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
@@ -220,7 +232,7 @@
                </div>
             </div>
 
-            <div class="produk-card">
+            <div class="produk-card" data-aos="zoom-in-left" data-aos-duration="500" data-aos-delay="1500">
                <div class="produk-icon">
                   <a href="#"><i data-feather="shopping-cart"></i></a>
                   <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
@@ -246,55 +258,61 @@
 
       <!-- Contact start -->
       <section id="kontak" class="kontak">
-         <h2><span>Kontak</span> Kami</h2>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, rerum.</p>
+         <div data-aos="fade-up" data-aos-duration="1500">
+            <h2><span>Kontak</span> Kami</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, rerum.</p>
+         </div>
 
-         <div class="row">
-            <iframe
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.8375557154113!2d113.9081867102415!3d-2.214888937336166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dfcb3fd69761e85%3A0xc5252af1e8ed517d!2sAbout%20Something%20Coffee%20Roastery!5e0!3m2!1sid!2sid!4v1707477926983!5m2!1sid!2sid"
-               allowfullscreen=""
-               loading="lazy"
-               referrerpolicy="no-referrer-when-downgrade"
-               class="map"
-            ></iframe>
+         <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="row">
+               <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.8375557154113!2d113.9081867102415!3d-2.214888937336166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dfcb3fd69761e85%3A0xc5252af1e8ed517d!2sAbout%20Something%20Coffee%20Roastery!5e0!3m2!1sid!2sid!4v1707477926983!5m2!1sid!2sid"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="map"
+               ></iframe>
 
-            <form action="">
-               <div class="input-group">
-                  <i data-feather="user"></i>
-                  <input type="text" placeholder="nama" />
-               </div>
-               <div class="input-group">
-                  <i data-feather="mail"></i>
-                  <input type="text" placeholder="email" />
-               </div>
-               <div class="input-group">
-                  <i data-feather="phone"></i>
-                  <input type="text" placeholder="no hp" />
-               </div>
-               <button type="submit" class="btn">kirim pesan</button>
-            </form>
+               <form action="">
+                  <div class="input-group">
+                     <i data-feather="user"></i>
+                     <input type="text" placeholder="nama" />
+                  </div>
+                  <div class="input-group">
+                     <i data-feather="mail"></i>
+                     <input type="text" placeholder="email" />
+                  </div>
+                  <div class="input-group">
+                     <i data-feather="phone"></i>
+                     <input type="text" placeholder="no hp" />
+                  </div>
+                  <button type="submit" class="btn">kirim pesan</button>
+               </form>
+            </div>
          </div>
       </section>
       <!-- Contact end -->
 
       <!-- Footer Start -->
-      <footer>
-         <div class="socials">
-            <a href=""><i data-feather="instagram"></i></a>
-            <a href=""><i data-feather="facebook"></i></a>
-            <a href=""><i data-feather="twitter"></i></a>
-            <a href=""><i data-feather="youtube"></i></a>
-         </div>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+         <footer>
+            <div class="socials">
+               <a href=""><i data-feather="instagram"></i></a>
+               <a href=""><i data-feather="facebook"></i></a>
+               <a href=""><i data-feather="twitter"></i></a>
+               <a href=""><i data-feather="youtube"></i></a>
+            </div>
 
-         <div class="links">
-            <a href="#">Home</a>
-            <a href="#">Tentang Kami</a>
-            <a href="#">Menu</a>
-            <a href="#">Kontak</a>
-         </div>
+            <div class="links">
+               <a href="#">Home</a>
+               <a href="#">Tentang Kami</a>
+               <a href="#">Menu</a>
+               <a href="#">Kontak</a>
+            </div>
 
-         <p>Created by <a href="">rionel.</a> | &copy; 2024</p>
-      </footer>
+            <p>Created by <a href="">rionel.</a> | &copy; 2024</p>
+         </footer>
+      </div>
       <!-- Footer End -->
 
       <!-- Modal Box Item Detail Start -->
@@ -324,6 +342,12 @@
       <!-- Feather Icons -->
       <script>
          feather.replace()
+      </script>
+
+      <!-- Animasi AOS -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+         AOS.init()
       </script>
 
       <script src="script.js"></script>
