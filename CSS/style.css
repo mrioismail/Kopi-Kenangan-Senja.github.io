@@ -3,6 +3,10 @@
    --bg: #010101;
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -121,7 +125,6 @@ body {
    background-color: white;
    width: 50rem;
    height: 5rem;
-   border-radius: 50px;
    display: flex;
    align-items: center;
    transform: scaleY(0);
@@ -516,7 +519,7 @@ footer p a {
 .modal {
    display: none;
    position: fixed;
-   z-index: 999;
+   z-index: 9999;
    left: 0;
    top: 0;
    width: 100%;
@@ -529,7 +532,7 @@ footer p a {
    position: relative;
    background-color: #fefefe;
    color: var(--bg);
-   margin: 15% auto;
+   margin: 13% auto;
    padding: 1.2rem;
    border: 1px solid #666;
    width: 80%;
@@ -548,7 +551,7 @@ footer p a {
    }
 }
 
-.close-icon {
+.modal-container .close-icon {
    position: absolute;
    right: 1rem;
 }
@@ -559,12 +562,12 @@ footer p a {
 }
 
 .modal-content img {
-   height: 13rem;
+   height: 16rem;
    margin-right: 2rem;
    margin-bottom: 2rem;
 }
 
-.modal-conten p {
+.modal-content p {
    font-size: 1.2rem;
    line-height: 1.8rem;
    margin-top: 1.2rem;
@@ -686,6 +689,11 @@ footer p a {
 
    .modal-content {
       flex-wrap: wrap;
+   }
+
+   .modal-content a {
+      display: flex;
+      align-items: center;
    }
 }
 

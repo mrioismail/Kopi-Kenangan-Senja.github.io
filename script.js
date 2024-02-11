@@ -41,25 +41,31 @@ shopping.addEventListener('click', function () {
    shoppingCart.classList.toggle('active')
 })
 
-// detail item produk
-const itemModal = document.querySelector('#item-detail-modal')
-const itemDetail = document.querySelector('.item-detail')
+// Modal Box
+const itemDetailModal = document.querySelector('#item-detail-modal')
+const itemDetailButtons = document.querySelectorAll('.item-detail-button')
 
-itemDetail.onclick = (e) => {
-   itemModal.style.display = 'flex'
+itemDetailButtons.forEach((btn) => {
+   btn.onclick = (e) => {
+      itemDetailModal.style.display = 'flex'
+      e.preventDefault()
+   }
+})
+
+itemDetailButtons.onclick = (e) => {
+   itemDetailModal.style.display = 'flex'
    e.preventDefault()
 }
 
-// // tombol clos detail item
-// document.querySelector('.modal .close-icon').onclick = (e) => {
-//    detailItem.style.display = 'none'
-//    e.preventDefault()
-// }
+// klik tombol close
+document.querySelector('.modal .close-icon').onclick = (e) => {
+   itemDetailModal.style.display = 'none'
+   e.preventDefault()
+}
 
-// // klik di luar modal
-// const modal = document.querySelector('#item-detail-modal');
-// window.onclick = (e){
-//    if (e.target === modal){
-//       modal.style.display = 'none'
-//    }
-// }
+// klik close diluar dimana aja
+window.onclick = (e) => {
+   if (e.target === itemDetailModal) {
+      itemDetailModal.style.display = 'none'
+   }
+}
